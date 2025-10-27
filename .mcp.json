@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "mysql": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "mcp/mysql",
+        "mysql://root:password@host.docker.internal:3306/ai"
+      ]
+    }
+  }
+}

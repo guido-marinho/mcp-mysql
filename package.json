@@ -1,0 +1,33 @@
+{
+  "name": "@modelcontextprotocol/server-mysql",
+  "version": "1.0.0",
+  "description": "MCP Server for MySQL databases - provides read-only access to MySQL databases",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-server-mysql": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "mcp",
+    "mysql",
+    "database",
+    "model-context-protocol"
+  ],
+  "author": "guido-marinho",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guido-marinho/db-mcp"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "mysql2": "^3.11.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
