@@ -26,7 +26,6 @@ docker run -i --rm mcp/mysql mysql://user:password@host:3306/database
 
 ```bash
 npm install -g @modelcontextprotocol/server-mysql
-mcp-server-mysql mysql://user:password@localhost:3306/database
 ```
 
 ### NPX
@@ -35,11 +34,36 @@ mcp-server-mysql mysql://user:password@localhost:3306/database
 npx -y @modelcontextprotocol/server-mysql mysql://user:password@localhost:3306/database
 ```
 
-## Usage with Claude Desktop
+## Usage
 
-Add to `claude_desktop_config.json`:
+Add to your MCP's config:
 
-### Using Docker
+### Using Docker image (recommended)
+
+```bash
+docker pull guidomarinho/mcp-mysql
+```
+
+```json
+{
+  "mcpServers": {
+    "your_mcp": {
+      "type": "stdio",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "guidomarinho/mcp-mysql:latest",
+        "mysql://root:password@host.docker.internal:3306/you_db"
+      ],
+      "env": {}
+    }
+  }
+}
+```
+
+### Using local Docker
 
 ```json
 {
